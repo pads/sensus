@@ -1,0 +1,14 @@
+// Used by Devise to show error messages.
+#error_explanation {
+    color: $error_color;
+    & h2 {
+        font-size: 16px;
+        text-align: left;
+    }
+}
+
+p.alert {
+    margin-top: $margin / 2;
+    margin-bottom: $margin / 2;
+    color: $error_color;
+}

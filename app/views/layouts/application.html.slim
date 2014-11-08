@@ -1,0 +1,22 @@
+doctype html
+html
+  head
+    title Sensus
+
+    meta name="title" content="Sensus"
+    meta name="description" content="A personal feelings diary application"
+    meta name="keywords" content="Sensus, Feelings, Mental Health"
+    meta name="viewport" content="width=device-width, initial-scale=1"
+
+    = csrf_meta_tags
+
+    link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css"
+    = stylesheet_link_tag :application
+  body
+    header
+      = link_to '/'
+        h1 Sensus
+    main
+      = yield
+    footer
+      | Copyright &copy; #{year} #{author}

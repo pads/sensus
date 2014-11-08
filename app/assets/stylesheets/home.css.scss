@@ -1,0 +1,7 @@
+.sign-options {
+    text-align:  center;
+    & a {
+        display: block;
+       margin: $margin / 2 $margin;
+    }
+}

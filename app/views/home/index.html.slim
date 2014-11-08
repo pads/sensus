@@ -1,0 +1,20 @@
+section.about
+  p
+    | Latin for
+    i  feeling.
+    |  A work-in-progress application to document your
+      feelings over time.
+  p
+    | The principle functionality aims to provide the ability to track your
+      feelings over time and be able to look back at what you were feeling and
+      why.
+  p
+    | This site is being developed as a mobile web app so if you are visiting
+      from a desktop, things might not look quite right just yet.
+
+section.sign-options
+  - if user_signed_in?
+    /TODO: Sign-out link
+  - else
+    = link_to 'Sign up', new_user_registration_path, class: 'pure-button pure-button-primary'
+    = link_to 'Sign in', new_user_session_path, class: 'pure-button'

@@ -1,0 +1,9 @@
+.pure-button {
+    font-size: 125%;
+}
+
+a, button, input[type='submit'] {
+    &.pure-button-primary {
+        background-color: $primary_color;
+    }
+}

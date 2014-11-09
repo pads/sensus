@@ -6,7 +6,7 @@ RSpec.describe HomeController, :type => :controller do
     sign_in user
 
     get :index
-    response.should redirect_to '/feelings'
+    expect(response).to redirect_to '/feelings'
   end
 
   it 'does not redirect when not signed in' do

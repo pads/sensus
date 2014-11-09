@@ -1,3 +1,7 @@
+h2 Feelings
 section.feelings
-  p Come here every day to record how you are feeling.
+  ul
+    - @feelings.each do |feeling|
+      li = "#{feeling.mood} - #{feeling.created_at.strftime('%d/%m/%y')}"
+
   = link_to 'Record a feeling', new_feeling_path, class: 'pure-button pure-button-primary pure-input-1'

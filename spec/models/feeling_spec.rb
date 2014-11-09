@@ -12,4 +12,10 @@ RSpec.describe Feeling, :type => :model do
 
     expect(feeling.valid?).to be false
   end
+
+  it 'should not validate without a user' do
+    feeling = Feeling.create(mood: :bad, description: 'I have no user')
+
+    expect(feeling.valid?).to be false
+  end
 end

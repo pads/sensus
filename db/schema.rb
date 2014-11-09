@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20141109151723) do
 
   create_table "feelings", force: true do |t|
     t.integer  "mood"
+    t.integer  "user_id"
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"

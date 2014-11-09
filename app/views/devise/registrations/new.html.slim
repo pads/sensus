@@ -14,3 +14,5 @@ h2 Sign up
       = form.password_field :password_confirmation, autocomplete: 'off', placeholder: 'Confirm the password', class: 'pure-input-1'
     div.pure-controls
       = form.submit 'Sign up', class: 'pure-button pure-button-primary pure-input-1'
+
+= render 'devise/shared/links'

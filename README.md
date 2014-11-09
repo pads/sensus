@@ -18,10 +18,12 @@ Firstly, thank you!
 ### Run
 
     bundle
+    bundle exec rake db:setup
     bundle exec rake db:migrate
     bundle exec rails s    
 
 ### Test
 
+    bundle exec rake db:setup RAILS_ENV=test
     bundle exec rake db:migrate RAILS_ENV=test
     bundle exec rspec

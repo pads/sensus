@@ -3,4 +3,12 @@ class FeelingsController < ApplicationController
 
   def index
   end
+
+  def new
+    @feeling = Feeling.new(user: current_user)
+  end
+
+  def create
+
+  end
 end

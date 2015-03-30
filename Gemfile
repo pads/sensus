@@ -35,8 +35,10 @@ gem 'rails_12factor', group: :production
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0'
+  gem 'rack-livereload'
   gem 'guard'
   gem 'guard-rspec'
+  gem 'guard-livereload'
 end
 
 ruby '2.1.4'

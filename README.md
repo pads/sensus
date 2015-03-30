@@ -6,6 +6,14 @@ over time.
 The principle functionality aims to provide the ability to track your
 feelings over time and be able to look back at what you were feeling and why.
 
+## Roadmap
+
+* Show individual feelings.
+* Edit individual feelings.
+* Display a chart of mood over time.
+* Allow other sign-up methods.
+* Style for desktop.
+
 ## Contributing
 
 Firstly, thank you!

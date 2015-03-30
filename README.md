@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/pads/sensus.png?branch=master)](https://travis-ci.org/pads/sensus)
+
 # Sensus
 
 Latin for *feeling*. A work-in-progress application to document your feelings

@@ -103,6 +103,7 @@ GEM
       rack
     rack-test (0.6.2)
       rack (>= 1.0)
+    rack-timeout (0.2.1)
     rails (4.1.7)
       actionmailer (= 4.1.7)
       actionpack (= 4.1.7)
@@ -206,6 +207,7 @@ DEPENDENCIES
   pg
   puma
   rack-livereload
+  rack-timeout
   rails (= 4.1.7)
   rails_12factor
   rspec-rails (~> 3.0.0)

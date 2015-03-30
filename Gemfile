@@ -35,6 +35,8 @@ gem 'rails_12factor', group: :production
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0'
+  gem 'guard'
+  gem 'guard-rspec'
 end
 
 ruby '2.1.4'

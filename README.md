@@ -10,7 +10,6 @@ feelings over time and be able to look back at what you were feeling and why.
 
 ## Roadmap
 
-* Show individual feelings.
 * Edit individual feelings.
 * Display a chart of mood over time.
 * Allow other sign-up methods.

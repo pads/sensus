@@ -9,6 +9,11 @@ class FeelingsController < ApplicationController
     @feeling = Feeling.new
   end
 
+  def show
+    @feeling = Feeling.where(id: params[:id], user: current_user).first
+    render file: 'public/404.html', status: 404, layout: false if @feeling.nil?
+  end
+
   def create
     @feeling = Feeling.new(feeling_params)
     @feeling.user = current_user

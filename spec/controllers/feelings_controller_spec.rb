@@ -20,7 +20,33 @@ RSpec.describe FeelingsController, :type => :controller do
   end
 
   describe 'show' do
-    #TODO
+    it 'redirects to the sign in page given an unauthenticated request' do
+      get :show, id: 1
+      expect(response).to redirect_to '/users/sign_in'
+    end
+
+    it 'assigns an individual feeling belonging to the current user' do
+      user = User.create!(email: 'foo@bar.com', password: 'test1234')
+      sign_in user
+
+      feeling = {}
+      expect(Feeling).to receive(:where).with(id: '1', user: user). and_return [feeling]
+
+      get :show, id: 1
+      expect(assigns(:feeling)).to eq feeling
+    end
+
+    it 'cannot show feelings belonging to one user when signed in as another' do
+      first_user = User.create!(email: 'foo@bar.com', password: 'test1234')
+      second_user = User.create!(email: 'baz@talis.com', password: 'test4321')
+
+      first_user.feelings.create(mood: :good, description: 'I know ruby')
+
+      sign_in second_user
+
+      get :show, id: 1
+      expect(response.status).to eq 404
+    end
   end
 
   describe 'new' do

@@ -1,5 +1,9 @@
-# Load the Rails application.
-require File.expand_path('../application', __FILE__)
+require 'rubygems'
+require 'bundler/setup'
+require 'lotus/setup'
+require_relative '../lib/sensus'
+require_relative '../apps/web/application'
 
-# Initialize the Rails application.
-Rails.application.initialize!
+Lotus::Container.configure do
+  mount Web::Application, at: '/'
+end

@@ -1,7 +1,0 @@
-h2 Feelings
-section.feelings
-  ul
-    - @feelings.each do |feeling|
-      li = link_to "#{feeling.mood} - #{feeling.created_at.strftime('%d/%m/%y')}", feeling_path(feeling)
-
-  = link_to 'Record a feeling', new_feeling_path, class: 'pure-button pure-button-primary pure-input-1'

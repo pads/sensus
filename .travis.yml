@@ -1,3 +1,4 @@
+sudo: false
 language: ruby
 rvm:
   - 2.1.4
@@ -7,6 +8,5 @@ addons:
   postgresql: "9.3"
 before_script:
   - psql -c 'create database travis_ci_test;' -U postgres
-  - cp config/database.yml.travis config/database.yml
-  - bundle exec rake db:setup RAILS_ENV=test
-  - bundle exec rake db:migrate RAILS_ENV=test
+  - cp .env.ci .env.test
+  - bundle exec rake test

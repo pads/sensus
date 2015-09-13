@@ -21,22 +21,14 @@ Firstly, thank you!
 
 ### Prerequisites
 
-* Rails 4+
-* Postgres 9.3+
+* Lotus 0.4.1
+* Postgresql 9.3+
 
 ### Run
 
     bundle
-    bundle exec rake db:setup
-    bundle exec rake db:migrate
-    bundle exec rails s
+    bundle exec lotus server
 
 ### Test
 
-    bundle exec rake db:setup RAILS_ENV=test
-    bundle exec rake db:migrate RAILS_ENV=test
-    bundle exec rspec
-
-To make tests run on source code changes, run guard first:
-
-    guard
+    bundle exec rake test

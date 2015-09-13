@@ -15,7 +15,7 @@ Lotus::Model.configure do
   #    adapter type: :sql, uri: 'postgres://localhost/sensus_development'
   #    adapter type: :sql, uri: 'mysql://localhost/sensus_development'
   #
-  adapter type: :file_system, uri: ENV['SENSUS_DATABASE_URL']
+  adapter type: :sql, uri: ENV['SENSUS_DATABASE_URL']
 
   ##
   # Database mapping

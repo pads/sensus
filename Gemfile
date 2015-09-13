@@ -8,6 +8,7 @@ gem 'lotus-model',  '~> 0.4'
 gem 'lotus-assets', git: 'https://github.com/lotus/assets.git'
 
 gem 'slim'
+gem 'pg'
 
 group :test do
   gem 'minitest'

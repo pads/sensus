@@ -1,2 +1,5 @@
 /db/sensus_development
 /db/sensus_test
+
+.env.test
+.env.development

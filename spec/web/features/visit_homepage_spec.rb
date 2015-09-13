@@ -6,4 +6,10 @@ describe 'Visiting the homepage' do
 
     page.title.must_include 'Sensus'
   end
+
+  it 'has the copyright notice' do
+    visit '/'
+
+    page.body.must_include 'Copyright &copy; 2015 Ben Paddock'
+  end
 end

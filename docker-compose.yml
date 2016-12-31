@@ -21,4 +21,4 @@ services:
       - .:/var/sensus
     ports:
       - '2300:2300'
-    command: 'bundle exec rake test'
+    command: 'bundle exec rake'

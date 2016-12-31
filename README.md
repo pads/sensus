@@ -13,3 +13,7 @@ Run the following command:
 
 This will create and run the required docker containers in the background.
 To stop them, run `bin/stop`
+
+# Testing
+
+    docker-compose run test

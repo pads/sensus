@@ -14,4 +14,8 @@ script:
   - docker-compose build
   - docker-compose run test
 
-
+after_success:
+  - if [ "$TRAVIS_BRANCH" == "master" ]; then
+    docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
+    docker push pads/sensus;
+    fi

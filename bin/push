@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+docker build -t pads/sensus .
+docker push pads/sensus:latest

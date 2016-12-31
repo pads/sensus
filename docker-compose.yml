@@ -1,0 +1,15 @@
+version: '2'
+services:
+  sensus:
+    build: .
+    image: 'pads/sensus:latest'
+    links:
+      - postgres
+    volumes:
+      - .:/var/sensus
+    ports:
+      - '2300:2300'
+  postgres:
+    image: 'postgres:9.6.1'
+    volumes:
+      - ./initdb.sh:/docker-entrypoint-initdb.d/init-sensus-db.sh

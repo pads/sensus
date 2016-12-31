@@ -1,0 +1,4 @@
+project=sensus
+architecture=container
+test=minitest
+template=erb

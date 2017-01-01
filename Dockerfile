@@ -13,4 +13,5 @@ RUN gem install hanami --version 0.9.2
 RUN bundle install
 RUN bundle-audit check --update
 
+EXPOSE 2300
 CMD bundle exec hanami server --host=0.0.0.0

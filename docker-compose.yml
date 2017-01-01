@@ -2,7 +2,7 @@ version: '2'
 services:
   sensus:
     build: .
-    image: 'pads/sensus:latest'
+    image: 'eu.gcr.io/sensus-154219/sensus:latest'
     links:
       - postgres
     volumes:
@@ -14,7 +14,7 @@ services:
     volumes:
       - ./initdb.sh:/docker-entrypoint-initdb.d/init-sensus-db.sh
   test:
-    image: 'pads/sensus:latest'
+    image: 'eu.gcr.io/sensus-154219/sensus:latest'
     links:
       - postgres
     volumes:

@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-docker build -t pads/sensus .
-docker push pads/sensus:latest
+docker build -t eu.gcr.io/sensus-154219/sensus:latest .
+docker push eu.gcr.io/sensus-154219/sensus:latest
